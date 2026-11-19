@@ -94,3 +94,19 @@ Final image: `entry.png`, PNG, 1024×1024, ~146 KB.
 ## License
 
 MIT — see `LICENSE`.
+
+## Design refresh (v2)
+
+The page was redesigned in premium broadsheet style (Financial Times / NYT
+polish): warm off-white paper, black ink, a single deep-red accent, a
+full-width Noto Serif Black masthead over a double rule, and a dateline
+strip. The lead story is now carried by an editorial illustration band —
+three leaders silhouetted at a summit table above the Shenzhen skyline,
+committed at `assets/summit-illustration.webp` and cropped into the page
+by `tools/make_image.py` — with an italic caption and credit line. The
+four secondary stories run in ruled columns with red small-caps kickers,
+a MARKETS data box pairs the Anthropic $83 IPO price with a bar visual of
+Nvidia's doubled revenue ($57.9B → $115.8B), and the ticker items close
+the page in an ink band at the foot. Same stories, same facts as v1.
+
+Final image: `entry.png`, PNG, 1024×1024, ~513 KB.
