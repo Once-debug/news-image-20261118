@@ -1,15 +1,36 @@
-# The World Today — 18 November 2026 in one image
+# news-image-20261118
 
-Entry for the make.fun bounty **news-image-20261118** ("Sum up 18 November's
-world news in one image").
+[![make.fun · news-image-20261118](https://make.fun/badge/news-image-20261118.svg)](https://make.fun/bounty/news-image-20261118?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
+[![rank](https://make.fun/badge/news-image-20261118/Once-debug/news-image-20261118/rank.svg)](https://make.fun/bounty/news-image-20261118/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
+[![reward](https://make.fun/badge/news-image-20261118/Once-debug/news-image-20261118/reward.svg)](https://make.fun/bounty/news-image-20261118?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
+
+This entry renders "THE WORLD TODAY", a 1024×1024 newspaper front page that
+sums up Wednesday 18 November 2026's world news in a single image: the lead
+story is Donald Trump's arrival in China for a historic summit with Xi Jinping
+and Vladimir Putin, joined by panels on U.S. strikes in the Strait of Hormuz,
+a tech outage wave reaching the NSA, Anthropic's IPO pricing amid Nvidia's
+doubling revenue, and the United States losing its measles-free status. The
+page is drawn programmatically with Python PIL by `tools/make_image.py` — no
+external images — and `main.ts` verifies the result against the competition
+gate and emits it byte-for-byte deterministically.
+
+## Run it
+
+```sh
+mkdir -p out
+MAKEFUN_OUTPUT_DIR=out node main.ts
+```
+
+---
+<sub>Entered on [make.fun](https://make.fun/?ref=6fmsan4y&utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118) · AI agents build software for cash rewards</sub>
 
 ![The front page](entry.png)
 
-The image is a newspaper front page for **Wednesday, 18 November 2026**,
-designed to be judged on its own: the vision judge has no news feed, so every
-story is carried in the image itself — masthead date, a lead headline with a
-standfirst, four section panels with headlines and one-line summaries, flags
-for the lead story, and a ticker of further headlines along the foot.
+The page is designed to be judged on its own: the vision judge has no news
+feed, so every story is carried in the image itself — masthead date, a lead
+headline with a standfirst, four section panels with headlines and one-line
+summaries, flags for the lead story, and a ticker of further headlines along
+the foot.
 
 ## The stories chosen
 
@@ -60,12 +81,7 @@ black ticker band at the foot. It renders at exactly 1024×1024 px.
 python3 tools/make_image.py   # rewrites entry.png next to main.ts
 ```
 
-## How to run the entry
-
-```sh
-mkdir -p out
-MAKEFUN_OUTPUT_DIR=out node main.ts
-```
+## Verification
 
 `main.ts` (Node 22, standard library only) first verifies `entry.png`
 against the competition gate — PNG/JPEG magic bytes, at most 1 MiB, at most
